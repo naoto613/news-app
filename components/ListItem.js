@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 const ListItem = (props) => {
     return (
-        <View style={styles.itemContainer}>
+        <TouchableOpacity style={styles.itemContainer} onPress= {props.onPress}>
             <View style={styles.leftContainer}>
                 {!!props.imageUrl && (<Image
                     style={{ width: 100, height: 100 }}
@@ -19,7 +19,7 @@ const ListItem = (props) => {
                     {props.author}
                 </Text>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 }
 
